@@ -1,0 +1,5 @@
+ Scaffold-DbContext "Server=LAPTOPELKYN7; Database=ABCDataBase; Trusted_Connection=True; trustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models/Db
+
+ trustServerCertificate=true creo que es innecesario en algunos casos.
+
+Add-Migration "NameDb"
