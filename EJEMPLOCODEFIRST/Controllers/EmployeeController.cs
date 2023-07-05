@@ -28,6 +28,25 @@ namespace EJEMPLOCODEFIRST.Controllers
          
         }
 
+        [HttpGet("getEmployeebyid/{id}")]
+        public async Task<ActionResult<Employee>> getEmployebyId(Guid id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("No se ingresaron Valores");
+            }
+            else
+            {
+                var employee = await _employee.GetEmployeeById(id);
+                if (employee == null)
+                {
+                    return StatusCode(StatusCodes.Status404NotFound, "No encontrado el dato");
+                }
+
+                return Ok(employee);
+            }
+        }
+
         [HttpPost]
         public async Task<ActionResult<Employee>> createEmployee([FromBody] EmployeeCreate value)
         {

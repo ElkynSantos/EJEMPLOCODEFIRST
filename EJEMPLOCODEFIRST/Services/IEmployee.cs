@@ -11,5 +11,7 @@ namespace EJEMPLOCODEFIRST.Services
         Task <Guid> DeleteEmployee(Guid employeeId);
         Task<Employee> ModifyEmployee(Employee value);
 
+        Task<Employee> GetEmployeeById(Guid employeeId);
+
     }
 }

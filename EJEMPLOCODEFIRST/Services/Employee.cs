@@ -51,6 +51,18 @@ namespace EJEMPLOCODEFIRST.Services
             return employees;
         }
 
+        public async Task<Employee> GetEmployeeById(Guid employeeId)
+        {
+            var employee = await _context.Employees.FindAsync(employeeId);
+
+            if (employee == null)
+            {
+                return null;
+            }
+                return employee;
+            
+        }
+
         public async Task<Employee> ModifyEmployee(Employee value)
         {
             var employee = await _context.Employees.FindAsync(value.EmployeeId);
