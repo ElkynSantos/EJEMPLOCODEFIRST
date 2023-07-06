@@ -3,3 +3,8 @@
  trustServerCertificate=true creo que es innecesario en algunos casos.
 
 Add-Migration "NameDb"
+
+
+hdeleon.net
+
+CODE FIRST con Entity Framework en .NET
